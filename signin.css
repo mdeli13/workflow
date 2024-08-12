@@ -1,0 +1,17 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: #fff;
+    background-color: #121212;
+}
+
+.container {
+    display: flex;
+}
+
+.sidebar {
+    width: 240px;
+    background-color: #1d1d1d;
+    padding: 20px;
+    height: 100vh;
+}
