@@ -1,17 +1,118 @@
 body {
-    margin: 0;
     font-family: Arial, sans-serif;
+    background-color: #1a1a2e;
     color: #fff;
-    background-color: #121212;
+    margin: 0;
+    padding: 0;
 }
 
 .container {
     display: flex;
+    height: 100vh;
 }
 
 .sidebar {
-    width: 240px;
-    background-color: #1d1d1d;
+    width: 250px;
+    background-color: #162447;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     padding: 20px;
-    height: 100vh;
+}
+
+.logo {
+    margin-bottom: 30px;
+}
+
+.menu {
+    width: 100%;
+}
+
+.menu ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.menu li {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.menu li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+    display: block;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+.menu li a:hover,
+.menu li.active a {
+    background-color: #1f4068;
+}
+
+.content {
+    flex: 1;
+    background-color: #1b1b3a;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.header {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 20px;
+}
+
+.page {
+    display: none;
+}
+
+.active-page {
+    display: block;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+table th,
+table td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+table th {
+    background-color: #1f4068;
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+}
+
+.pagination button {
+    background-color: #e43f5a;
+    border: none;
+    padding: 10px 20px;
+    margin: 0 5px;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.pagination button:hover {
+    background-color: #ff4f79;
+}
+
+img {
+    width: 25%;
+    object-fit: scale-down;
+    border-radius: 10px;
+    margin-bottom: 20px;
 }
