@@ -12,20 +12,20 @@
 <body>
     <div class="container">
         <h1 id="title">Log in to your account</h1>
-        <form action="#">
+        <form id="loginForm">
             <div class="input-control">
                 <label for="email">E-mail address</label>
-                <input id="email" type="email" placeholder="demo@example.com">
+                <input id="email" type="email" placeholder="demo@example.com" required>
             </div>
             <div class="input-control">
                 <label for="password">Password</label>
-                <input id="password" type="password">
+                <input id="password1" type="password" required>
             </div>
-            <button type="submit" id="login" class="btn" onclick="func()">Log In</button>
+            <button type="submit" id="login" class="btn btn-primary">Log In</button>
         </form>
     </div>
 
-    <script src="zzz.js"></script>
+    <script src="script.js"></script>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>

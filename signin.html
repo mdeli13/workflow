@@ -10,90 +10,54 @@
 </head>
 
 <body>
-    <div class="container">
-        <div class="sidebar">
-            <div class="logo">
-                <h2>RESERVE EASE</h2>
-            </div>
-            <div class="menu">
-                <ul>
-                    <li class="active"><a href="#" onclick="showPage('bookings')">Bookings</a></li>
-                    <li><a href="#" onclick="showPage('cabins')">Cabins</a></li>
-                    <li><a href="#" onclick="showPage('users')">Users</a></li>
-                    <li><a href="#" onclick="showPage('settings')">Settings</a></li>
-                    <li><a href="#" onclick="showPage('profile')">Profile</a></li>
-                </ul>
-            </div>
-        </div>
-        <div class="content">
-            <div class="header">
-                <div class="user-info">
-                    <span>Mustafa Delibas</span>
-                </div>
-            </div>
-            <div id="bookings" class="page active-page">
-                <h2>Bookings</h2>
-                <table>
-                    <thead>
-                        <tr>
-                            <th>ID</th>
-                            <th>Name</th>
-                            <th>Email</th>
-                            <th>Booking Details</th>
-                            <th>Status</th>
-                            <th>Amount</th>
-                            <th>Actions</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>001</td>
-                            <td>Yigit Yavuz</td>
-                            <td>Yigityavuz9999@gmail.com</td>
-                            <td>In 1 month ➔ 4 night stay (Sep 15 2024 ➔ Sep 18 2024)</td>
-                            <td>UNCONFIRMED</td>
-                            <td>$1,200.00</td>
-                            <td><button onclick="viewDetails()">See details</button></td>
-                        </tr>
-                        <tr>
-                            <td>002</td>
-                            <td>Erdem Pehlül</td>
-                            <td>erdempehlul.1264325@hotmail.com</td>
-                            <td>In almost 2 months ➔ 3 night stay (Oct 10 2024 ➔ Oct 12 2024)</td>
-                            <td>UNCONFIRMED</td>
-                            <td>$900.00</td>
-                            <td><button onclick="viewDetails()">See details</button></td>
-                        </tr>
-                    </tbody>
-                </table>
-                <div class="pagination">
-                    <button>Previous</button>
-                    <button>Next</button>
-                </div>
-            </div>
-            <div id="cabins" class="page">
-                <h2>Cabins</h2>
-            </div>
 
-            <div id="users" class="page">
-                <h2>Users </h2>
+    <body>
+        <div class="container">
+            <div class="sidebar">
+                <div class="logo">
+                    <h2>RESERVE EASE</h2>
+                </div>
+                <div class="menu">
+                    <ul>
+                        <li class="active"><a href="#" onclick="showPage('bookings')">Bookings</a></li>
+                        <li><a href="#" onclick="showPage('cabins')">Cabins</a></li>
+                        <li><a href="#" onclick="showPage('users')">Users</a></li>
+                        <li><a href="#" onclick="showPage('settings')">Settings</a></li>
+                        <li><a href="#" onclick="showPage('profile')">Profile</a></li>
+                    </ul>
+                </div>
             </div>
-            <div id="settings" class="page">
-                <h2>Settings</h2>
-            </div>
-            <div id="profile" class="page">
-                <div class="profile-page">
-                    <img src="jpeg-optimizer_WhatsApp Image 2024-02-16 at 4.24.08 PM.jpg" alt="">
-                    <h2>Mustafa Delibas</h2>
-                    <p>Email: delibas123@gmail.com</p>
+            <div class="content">
+                <div class="header">
+                    <div class="user-info">
+                        <span>Mustafa Delibas</span>
+                    </div>
+                </div>
+                <div id="bookings" class="page active-page">
+                    <h2>Bookings</h2>
+                </div>
+                <div id="cabins" class="page">
+                    <h2>Cabins</h2>
+                </div>
+                <div id="users" class="page">
+                    <h2>Users </h2>
+                </div>
+                <div id="settings" class="page">
+                    <h2>Settings</h2>
+                </div>
+                <div id="profile" class="page">
+                    <div class="profile-page">
+                        <img src="photos/user1.jpg" alt="">
+                        <h2>Mustafa Delibas</h2>
+                        <p>Email: delibas123@gmail.com</p>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-    <script src="script.js"></script>
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-</body>
+        <script src="script.js"></script>
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    </body>
 
 </html>
