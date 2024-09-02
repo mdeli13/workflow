@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const supabaseClient = createClient(supabaseUrl, supabaseKey);
 
     const bookingForm = document.getElementById('bookingForm');
-    const bookingTableBody = document.querySelector('#bookingTable tbody');
+    const bookingTableBody = document.querySelector('#bookings tbody');
 
     async function loadBookings() {
         if (!bookingTableBody) {
@@ -24,15 +24,16 @@ document.addEventListener("DOMContentLoaded", function () {
             }
 
             bookingTableBody.innerHTML = '';
-            bookings.forEach(booking => {
+            bookings.forEach(bookings => {
                 const row = document.createElement('tr');
                 row.innerHTML = `
-                    <td>${booking.id}</td>
-                    <td>${booking.name}</td>
-                    <td>${booking.email}</td>
-                    <td>${booking.details}</td>
-                    <td>${booking.status}</td>
-                    <td>${booking.amount}</td>
+                    <td>${bookings.id}</td>
+                    <td>${bookings.name}</td>
+                    <td>${bookings.email}</td>
+                    <td>${bookings.details}</td>
+                    <td>${bookings.status}</td>
+                    <td>${bookings.amount}</td>
+                    <td><button class="btn btn-primary">See details</button></td>
                 `;
                 bookingTableBody.appendChild(row);
             });
@@ -40,6 +41,7 @@ document.addEventListener("DOMContentLoaded", function () {
             console.error('Error:', error.message);
         }
     }
+
     if (bookingForm) {
         bookingForm.addEventListener('submit', async (event) => {
             event.preventDefault();
@@ -53,9 +55,7 @@ document.addEventListener("DOMContentLoaded", function () {
             try {
                 const { data, error } = await supabaseClient
                     .from('bookings')
-                    .insert([
-                        { name, email, details, status, amount }
-                    ]);
+                    .insert([{ name, email, details, status, amount }]);
 
                 if (error) {
                     console.error('Error adding booking:', error);
@@ -73,22 +73,24 @@ document.addEventListener("DOMContentLoaded", function () {
     if (bookingTableBody) {
         loadBookings();
     }
+
+    function showPage(pageId) {
+        const pages = document.querySelectorAll('.page');
+        pages.forEach(page => page.classList.remove('active-page'));
+
+        const selectedPage = document.getElementById(pageId);
+        if (selectedPage) {
+            selectedPage.classList.add('active-page');
+        }
+
+        const menuItems = document.querySelectorAll('.menu li');
+        menuItems.forEach(item => item.classList.remove('active'));
+
+        const activeItem = document.querySelector(`.menu li a[onclick="showPage('${pageId}')"]`)?.parentElement;
+        if (activeItem) {
+            activeItem.classList.add('active');
+        }
+    }
+
+    window.showPage = showPage;
 });
-
-function showPage(pageId) {
-    const pages = document.querySelectorAll('.page');
-    pages.forEach(page => page.classList.remove('active-page'));
-
-    const selectedPage = document.getElementById(pageId);
-    if (selectedPage) {
-        selectedPage.classList.add('active-page');
-    }
-
-    const menuItems = document.querySelectorAll('.menu li');
-    menuItems.forEach(item => item.classList.remove('active'));
-
-    const activeItem = document.querySelector(`.menu li a[onclick="showPage('${pageId}')"]`)?.parentElement;
-    if (activeItem) {
-        activeItem.classList.add('active');
-    }
-}
